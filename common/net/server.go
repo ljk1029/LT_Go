@@ -1,3 +1,5 @@
+// socket server
+
 package main
 import (
 	"fmt"

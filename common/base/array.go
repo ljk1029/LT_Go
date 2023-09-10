@@ -6,15 +6,17 @@ import (
 	"sort"
 )
 
+// 字符转换
 func stocFun() {
-	var str string = "hello,world!北京"
-	str2 := []rune(str) //把str转成 【】rune
+	var str string = "hello,world! 北京"
+	str2 := []rune(str) //把str转成 rune
 
 	for i := 0; i < len(str2); i++ {
 		fmt.Printf("%c \n", str2[i]);
 	}
 }
 
+// 循环
 func forFun() {
 	var str string = "abc~ok"
 	for index, val := range str {
@@ -33,6 +35,7 @@ func forFun() {
 	}
 }
 
+// 数组
 func arrayFun() {
 	//var arr [10]int  = [10]int{1, 2, 3, 10, 0, 11, 5, 6, 7, 9}
 	var iArr [10]int = [...]int{1, 2, 3, 10, 0, 11, 12, 13, 14, 15}
@@ -47,6 +50,7 @@ func arrayFun() {
 	fmt.Println("slice 容量=", cap(slice))
 }
 
+// 排序
 func sortFun() {
 	var sort_var []int
 	sort_var = append(sort_var, 10)
@@ -58,9 +62,15 @@ func sortFun() {
 	fmt.Println("排序后：",sort_var)
 }
 
+
+// 测试
 func main() {
+	fmt.Println("[字符转换测试]")
 	stocFun()
+	fmt.Println("[循环测试]")
 	forFun()
+	fmt.Println("[数组测试]")
 	arrayFun()
+	fmt.Println("[排序测试]")
 	sortFun()
 }

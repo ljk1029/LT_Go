@@ -1,4 +1,4 @@
-// 携程
+// 携程测试
 package main
 
 import (
@@ -30,6 +30,7 @@ func wirteLock(n int){
 	lock.Unlock()
 }
 
+// 测试
 func main() {
 	// 携程
 	go goroutine()

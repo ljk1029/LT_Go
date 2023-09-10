@@ -1,3 +1,5 @@
+// socket client
+
 package main
 import (
 	"fmt"
@@ -9,7 +11,7 @@ import (
 
 func main() {
 
-	conn, err := net.Dial("tcp", "192.168.83.151:8888")
+	conn, err := net.Dial("tcp", "127.0.0.1:8888")
 	if err != nil {
 		fmt.Println("client dial err=", err)
 		return 
@@ -37,6 +39,4 @@ func main() {
 			fmt.Println("conn.Write err=", err)	
 		}
 	}
-	
-
 }

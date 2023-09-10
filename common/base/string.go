@@ -3,7 +3,8 @@ package main
 import "fmt"
 import "strconv"
 
-func inFun() {
+// 输出
+func inputFun() {
 	var name string
 	var sal float32
 	fmt.Println("请输入姓名")
@@ -13,13 +14,15 @@ func inFun() {
 	fmt.Printf("姓名 %v 薪水 %v\n", name, sal)
 }
 
-func addrFun() {
+// 输出
+func outputFun() {
 	var i1 int = 10
 	var ptr *int = &i1
 	fmt.Println("i1的地址=", &i1, ptr)
 }
 
-func formFun_1() {
+// 字符串格式化，格式成字符串
+func formFunA() {
 	var num1 int = 99
 	var num2 float64 = 24.34
 	var b bool = true
@@ -39,7 +42,8 @@ func formFun_1() {
 	fmt.Printf("str type %T str=%q\n", str, str)
 }
 
-func formFun_2() {
+// 字符串格式化，格式成字符串
+func formFunB() {
 	var num1 int = 99
 	var num2 float64 = 24.34
 	var b bool = true
@@ -60,8 +64,12 @@ func formFun_2() {
 }
 
 func main() {
-	formFun_1()
-	formFun_2()
-	addrFun()
-	addrFun()
+	fmt.Println("[格式成字符串]")
+	formFunA()
+	fmt.Println("[格式成字符串]")
+	formFunB()
+	fmt.Println("[输入测]")
+	inputFun()
+	fmt.Println("[输出测试]")
+	outputFun()
 }

@@ -1,3 +1,4 @@
+// 文件io测试
 package main
 
 import (
@@ -8,12 +9,12 @@ import (
 )
 
 var (
-	filePath = "/home/li_jk/ljkTest/Go/common/base/test.txt"
-	filePath_s = "/home/li_jk/ljkTest/Go/common/base/test.txt"
-	filePath_d = "/home/li_jk/ljkTest/Go/common/base/test1.txt"
+	filePath = "E:/MyWork/github/B_Go/common/base/test.txt"
+	filePath_new = "E:/MyWork/github/B_Go/common/base/test_new.txt"
 )
 
 
+// 写
 func WriteFun() {
 	file, err := os.OpenFile(filePath, os.O_WRONLY | os.O_CREATE, 0666)
 	if err != nil {
@@ -22,8 +23,7 @@ func WriteFun() {
 
 	defer file.Close()
 
-	// 写
-	str_w := "hello,lijk\n"
+	str_w := "hello, go\n"
 	writer := bufio.NewWriter(file)
 	
 	for i:=0; i<5; i++ {
@@ -32,6 +32,7 @@ func WriteFun() {
 	writer.Flush()
 }
 
+// 读
 func ReadFun() {
 	file, err := os.Open(filePath)
 	if err != nil {
@@ -80,7 +81,7 @@ func main() {
 	ReadFun()
 
 	// copy
-	_, err := CopyFile(filePath_d, filePath_s)
+	_, err := CopyFile(filePath_new, filePath)
 	if err == nil {
 		fmt.Printf("拷贝完成\n")
 	} else {
